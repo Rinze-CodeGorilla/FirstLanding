@@ -1,0 +1,16 @@
+# course config files
+*.yaml
+
+# gradle
+.gradle/
+build
+
+
+# idea config
+.idea
+
+# old stages
+/First Landing/*
+!/First Landing/task/
+/First Landing/task/*
+!/First Landing/task/src

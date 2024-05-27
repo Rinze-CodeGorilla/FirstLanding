@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            --main-height: 60vh;
+            max-height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        header {
+            min-height: 10vh;
+            background-color: darkblue;
+        }
+
+        main {
+            min-height: var(--main-height);
+            background-color: blue;
+        }
+
+        footer {
+            min-height: 30vh;
+            background-color: midnightblue;
+            max-width: 100%;
+
+            #contact {
+                display: flex;
+                flex-wrap: wrap;
+                place-content: space-evenly;
+                #contact-col1 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    max-width: 100%;
+
+                    div {
+                        display: flex;
+                        gap: 2rem;
+                    }
+                }
+                #contact-col2 {
+                    max-width: 100%;
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                    }
+                }
+            }
+        }
+
+        nav, #contact-col1 {
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            place-content: space-between;
+            place-items: center;
+            gap: 2rem;
+            padding: 1rem;
+
+            a {
+                text-decoration: none;
+                margin: auto 0;
+                color: white;
+            }
+
+            #link_product, #link_contact {
+                margin-left: auto;
+            }
+
+        }
+
+        .button {
+            text-decoration: none;
+            border: 1px solid;
+            padding: 1rem;
+        }
+
+        #home {
+            overflow: hidden;
+            text-align: center;
+            /*height: var(--main-height);*/
+        }
+
+        #product {
+            display: flex;
+            flex-wrap: nowrap;
+            margin: auto;
+            place-content: space-evenly;
+
+            > div {
+                text-align: center;
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a id="link_logo" href="#home">
+            <img src="logo.jpg" width="64" height="64" alt="Logo" title="Logo">
+        </a>
+        <a id="link_home" href="#home">Home</a>
+        <a id="link_product" href="#product">Product</a>
+        <a id="link_contact" href="#contact">Contact</a>
+    </nav>
+</header>
+<main>
+    <div id="home">
+        <h1>New Thing</h1>
+        <p>New thing is new</p>
+        <a class="button" href="#product">Product</a>
+    </div>
+    <div id="product">
+        <div id="col-1">
+            <div>
+                <h2>Product One</h2>
+                <p>One is pretty glorious</p>
+            </div>
+            <img src="p1.jpg" alt="product 1 image" title="product 1">
+        </div>
+        <div id="col-2">
+            <div>
+                <h2>Product Two</h2>
+                <p>Two is pretty awesome</p>
+            </div>
+            <img src="p2.jpg" alt="product 2 image" title="product 2">
+        </div>
+    </div>
+</main>
+<footer>
+    <div id="contact">
+        <div id="contact-col1">
+            <a id="footer_link_logo" href="#home">
+                <img src="logo.jpg" width="64" height="64" alt="Logo" title="Logo">
+            </a>
+            <div>
+                <a id="footer_link_home" href="#home">Home</a>
+                <a id="footer_link_product" href="#product">Product</a>
+                <a id="footer_link_contact" href="#contact">Contact</a>
+            </div>
+            <p>(c) 2024</p>
+        </div>
+        <div id="contact-col2">
+            <form>
+                <h5>Sign up</h5>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required placeholder="you@example.com">
+                </div>
+                <div>
+                    <label for="ts">
+                        <input type="checkbox" name="ts" id="ts" required>
+                        I agree
+                    </label>
+                </div>
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
